@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import DistrictPage from "./pages/DistrictPage";
+import Home from "./Pages/Home";
+import DistrictPage from "./Pages/DistrictPage";
+import PlanningPermits from "./Pages/PlanningPermits";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -10,6 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/planning-permits" element={<PlanningPermits />} />
         <Route path="/district/:districtCode" element={<DistrictPage />} />
       </Routes>
     </Router>
